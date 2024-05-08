@@ -1,0 +1,43 @@
+.WishList{
+    width: 90%;
+    margin: auto;
+    margin-block: 30px 50px;
+    .WishList_Header{
+        display: flex;justify-content: center;align-items: center;
+        font-size: 40px;
+        font-weight: 900;
+        padding-bottom: 3vw;
+        .ProductsCards{
+            display: flex !important;
+        }
+    }
+}
+.ProductsCards{
+    display: flex !important;justify-content: center;align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 90% !important;
+    margin-inline: auto !important;
+}
+.RemoveFavCard{
+    .Card_Product_Top{
+        .Right{
+            .SingleOrder_icon, .AddFav_icon{
+                display: none;
+            }
+            .RemoveFav_icon{
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .WishList{
+        .WishList_Header{
+            font-size: 25px;
+            font-weight: 900;
+        }
+    }
+    
+}

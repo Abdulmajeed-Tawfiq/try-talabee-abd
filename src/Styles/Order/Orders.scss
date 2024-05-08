@@ -1,0 +1,87 @@
+.Orders{
+    padding: 30px 6vw;
+    .Header{
+        width: 100%;
+        background: var(--bg3);
+        @include Shadow;
+        font-size: 2vw;
+        padding: 10px;
+        @include Flex;
+        margin-block: 10px;
+        color: var(--text);
+        font-weight: bold;
+    }
+    :where(.css-dev-only-do-not-override-1adbn6x).ant-table-wrapper .ant-table-pagination-right{
+        justify-content: center !important;
+    }
+}
+.card-header:first-child{
+    border-radius: 9px 9px 0 0 ;
+}
+
+.single_order{
+    background: var(--bg) !important; 
+}
+
+@media screen and (max-width: 650px) {
+    .Orders{
+        padding: 30px 3vw;
+        overflow-x: hidden;
+        margin-inline: auto;
+    }
+    tbody, td, tfoot, th, thead, tr{
+        font-size: 10px !important;
+    }
+    :where(.css-dev-only-do-not-override-1adbn6x).ant-tag, :where(.css-dev-only-do-not-override-1adbn6x).ant-tag a, :where(.css-dev-only-do-not-override-1adbn6x).ant-tag a:hover{        font-size: 1px !important;
+        font-size: 11px !important;
+    }
+    :where(.css-dev-only-do-not-override-1adbn6x).ant-table-wrapper .ant-table-cell, :where(.css-dev-only-do-not-override-1adbn6x).ant-table-wrapper .ant-table-thead>tr>th, :where(.css-dev-only-do-not-override-1adbn6x).ant-table-wrapper .ant-table-tbody>tr>th, :where(.css-dev-only-do-not-override-1adbn6x).ant-table-wrapper .ant-table-tbody>tr>td, :where(.css-dev-only-do-not-override-1adbn6x).ant-table-wrapper tfoot>tr>th, :where(.css-dev-only-do-not-override-1adbn6x).ant-table-wrapper tfoot>tr>td {
+        position: relative;
+        padding: 11px 8px;
+        overflow-wrap: break-word;
+    }
+    
+  }
+
+  @media screen and (max-width: 450px) {
+    .Orders{
+        padding: 10px  3vw;
+        overflow-x: hidden;
+    }
+    .ant-tag{
+        font-size: 8px;
+    }
+    .ant-table-cell{
+        padding: 5px !important;
+    }
+    tbody, td, tfoot, th, thead, tr{
+        font-size: 6px !important;
+    }
+    :where(.css-dev-only-do-not-override-1adbn6x).ant-tag, :where(.css-dev-only-do-not-override-1adbn6x).ant-tag a, :where(.css-dev-only-do-not-override-1adbn6x).ant-tag a:hover{        font-size: 1px !important;
+        font-size: 7px !important;
+    }
+    :where(.css-dev-only-do-not-override-1adbn6x).ant-table-wrapper .ant-table-cell, :where(.css-dev-only-do-not-override-1adbn6x).ant-table-wrapper .ant-table-thead>tr>th, :where(.css-dev-only-do-not-override-1adbn6x).ant-table-wrapper .ant-table-tbody>tr>th, :where(.css-dev-only-do-not-override-1adbn6x).ant-table-wrapper .ant-table-tbody>tr>td, :where(.css-dev-only-do-not-override-1adbn6x).ant-table-wrapper tfoot>tr>th, :where(.css-dev-only-do-not-override-1adbn6x).ant-table-wrapper tfoot>tr>td {
+        position: relative;
+        padding: 7px 5px !important;
+        overflow-wrap: break-word;
+    }
+  }
+
+
+  ////// SINGLE ORDER INFO ////////////////////////////////////////////////
+  @media screen and (max-width: 775px) {
+    .SingleOrderInfo{
+        flex-direction: column;
+      }
+}
+
+@media screen and (max-width: 450px) {
+    .SingleOrderInfo{
+        .SingleOrderInfoFont{
+            font-size: 11px !important;
+        }
+    }
+    .SingleOrderInfoFont{
+        font-size: 11px !important;
+    }
+}
