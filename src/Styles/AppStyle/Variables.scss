@@ -25,12 +25,14 @@
     --bg3:#fafafa;
     --bg4:#e7ecf2;
     --bg5:#e7ecf2;
+    --bg6:#e7ecf2;
     
     --border:#647285cb;
     --border2:rgba(0,0,0,0.3);
     --shadow: rgba(0, 0, 0, 0.15);
     
     --gray : rgb(207, 210, 214);
+    --graytoblack : rgb(207, 210, 214);
     --whiteandblack:#fff;
     --blacktowhite:#000;
     --white:#fff;
@@ -43,9 +45,9 @@
 
 :root:has(.dark) {
     --primary: #000;     
-    --secondary: #35c6c2;   
+    --secondary: #d90217;   
     --thirdly:#35c6c2;
-    --fourthly:#fff;
+    --fourthly:#35c6c2;
     --fifthly:#35c6c2;
     --sixthly:#35c6c2;
     --seven:#35c6c2;
@@ -59,6 +61,8 @@
     --bg3:#000;
     --bg4:#1f1f1f;
     --bg5:#35c6c2;
+    --bg5:#e7ecf2;
+
     
     --border:#fff;
     --border2:#35c6c2;
@@ -67,6 +71,7 @@
     --white:#fff;
     --black:#000;
     --gray: #a0aec0;  
+    --graytoblack : #000;
     --whiteandblack:#000;
     --blacktowhite:#fff;
 

@@ -7,7 +7,7 @@
     padding: 0 10vw;
     gap: 50px;
     .button {
-        background-color: var(--primary) ;
+        background-color: var(--fourthly) ;
         color: var(--white);
         font-weight: bold;
         outline: none;
@@ -55,6 +55,15 @@
         input {
             margin-bottom: 20px;
         }
+    }
+}
+
+.BecomePartner{
+    width: 50% !important;
+    margin-inline: auto;
+    .partner_image{
+        width: 100% ;
+        mix-blend-mode: multiply;
     }
 }
 
@@ -120,7 +129,7 @@
             }
     }
     .BecomePartner{
-        width: 80% !important;
+        width: 90% !important;
         h1{
             font-size: 40px !important;
         }
@@ -130,7 +139,7 @@
 
 
 .BecomePartner{
-    width: 50% !important;
+    width: 80% !important;
     margin-inline: auto;
     .partner_image{
         width: 100% ;
@@ -147,34 +156,11 @@
             margin-bottom: 20px;
         }
 }
-
-// .custom-file-input-button {
-//     background-color: #eee;
-//     border: dashed 1px black;
-//     color: white;
-//     padding: 15px 32px;
-//     text-align: center;
-//     text-decoration: none;
-//     /* display: inline-block; */
-//     font-size: 16px;
-//     margin: 4px 2px;
-//     cursor: pointer;
-//     border-radius: 4px;
-//    }
-
 .Contact {
     .BecomePartner{
         button{
             background: transparent !important;
-            color: var(--primary) !important;
+            color: var(--fourthly) !important;
         }
     }
 }
-
-    // upload image text //
-    
-:where(.css-dev-only-do-not-override-1ae8k9u).ant-btn >span{
-    // margin-left: 10px;
-}
-
-/* Add this to your global styles or a specific component stylesheet */

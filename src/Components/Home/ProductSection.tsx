@@ -13,7 +13,7 @@ const ProductSection: React.FC<TProductSection> = ({ data }) => {
   if (data?.data?.length > 0) {
     return (
 
-      <div className='ProductSection'>
+      <div className='ProductSection pb-5'>
         <SubTitle {...TitleProps} />
         <div className='Cards'>
           <CardSwiper data={data?.data} />

@@ -14,8 +14,8 @@ const FavouritePage = ({ isLoading }: any) => {
   const {data}  = useGetFav(); 
   
   return (
-    <Layout className='WishList without_background'>
-      <h1 className="WishList_Header">
+    <Layout className='WishList darkmode_bg'>
+      <h1 className="WishList_Header pt-5 pb-4">
           {t("My WishList")} :
       </h1>
 
@@ -24,13 +24,15 @@ const FavouritePage = ({ isLoading }: any) => {
         <Spin />
       ) : (
         fakeArray?.map((item: any, index: any) => (
-          <span className={'RemoveFavCard'} key={index}>
+          <span className={'Fav_Single_Card'} key={index}>
             <CardProduct item={item} />
           </span>
         ))
       )}
     </div>
-    <ProductPagination data={data?.pagination} />
+    <div className='pt-3 pb-5'>
+      <ProductPagination data={data?.pagination} />
+    </div>
 
     </Layout>
   )

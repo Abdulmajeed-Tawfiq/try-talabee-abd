@@ -4,16 +4,21 @@
         width: 100%;
         background: var(--bg3);
         @include Shadow;
-        font-size: 2vw;
+        font-size: 28px;
         padding: 10px;
         @include Flex;
         margin-block: 10px;
         color: var(--text);
         font-weight: bold;
+        border-radius: 10px 10px 0 0;
     }
     :where(.css-dev-only-do-not-override-1adbn6x).ant-table-wrapper .ant-table-pagination-right{
         justify-content: center !important;
     }
+}
+.order_table_container{
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
 }
 .card-header:first-child{
     border-radius: 9px 9px 0 0 ;
@@ -28,6 +33,9 @@
         padding: 30px 3vw;
         overflow-x: hidden;
         margin-inline: auto;
+        .Header{
+            font-size: 18px;
+        }
     }
     tbody, td, tfoot, th, thead, tr{
         font-size: 10px !important;
@@ -85,3 +93,11 @@
         font-size: 11px !important;
     }
 }
+
+
+
+//table border radius remove
+:where(.css-dev-only-do-not-override-1ae8k9u).ant-table-wrapper .ant-table-container table>thead>tr:first-child >*:last-child,:where(.css-dev-only-do-not-override-1ae8k9u).ant-table-wrapper .ant-table-container table>thead>tr:first-child >*:first-child{
+    border-radius: 0 !important;
+}
+

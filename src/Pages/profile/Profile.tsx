@@ -5,9 +5,14 @@ import Layout from "../../Layout/app/Layout";
 import { LoadingButton } from "../../Components/Utils/Loading/LoadingButton";
 import { getInitialValues, getValidationSchema } from "./formUtils";
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 function Profile() {
+
+
   const navigate = useNavigate();
+  const { t } = useTranslation();
+
 
   const handleSubmit = () => {
     toast.success("Profile updated successfully");
@@ -16,11 +21,13 @@ function Profile() {
   const handleCancel = () => {
     navigate('/');
   };
-
+  const handleLogout = () => {
+    navigate('/auth');
+  };
   return (
     <Layout>
       <div className="profile pt-5 pb-5">
-        <h1 className="text-center mb-3">Edit your <span>Profile</span></h1>
+        <h1 className="text-center mb-3">{t(`Edit your`)} <span>{t("Profile")}</span></h1>
         <div className="profile_form" >
           <Formik
             initialValues={getInitialValues()}
@@ -29,13 +36,13 @@ function Profile() {
           >
             {(formik) => (
               <Form onSubmit={formik.handleSubmit}>
-                <label htmlFor="name">Name</label>
+                <label htmlFor="name">{t("Name")}</label>
                 <Field id="name" placeholder="Please enter your name" name="name" />
                 {formik.errors.name && formik.touched.name && (
                   <div className="text-danger mb-3">{formik.errors.name}</div>
                 )}
 
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">{t("email")}</label>
                 <Field
                   id="email"
                   name="email"
@@ -46,7 +53,7 @@ function Profile() {
                   <div className="text-danger mb-3">{formik.errors.email}</div>
                 )}
 
-                <label htmlFor="phone">Phone</label>
+                <label htmlFor="phone">{t("Phone")}</label>
                 <Field
                   id="phone"
                   name="phone"
@@ -57,7 +64,7 @@ function Profile() {
                   <div className="text-danger mb-3">{formik.errors.phone}</div>
                 )}
 
-                <label htmlFor="country">Country</label>
+                <label htmlFor="country">{t("Country")}</label>
                 <Field
                   id="country"
                   name="country"
@@ -67,7 +74,7 @@ function Profile() {
                 {formik.errors.country && formik.touched.country && (
                   <div className="text-danger mb-3">{formik.errors.country}</div>
                 )}
-                <label htmlFor="password">Password</label>
+                <label htmlFor="password">{t("Password")}</label>
                 <Field
                   id="password"
                   name="password"
@@ -77,10 +84,12 @@ function Profile() {
                 {formik.errors.password && formik.touched.password && (
                   <div className="text-danger mb-3">{formik.errors.password}</div>
                 )}
-
+                <div className="logout">
+                  <Button onClick={handleLogout} >{t("Logout")}</Button>
+                </div>
                 <div className="buttons">
-                  <Button onClick={handleCancel} >canel</Button>
-                  <LoadingButton type="submit">Update</LoadingButton>
+                  <Button onClick={handleCancel} >{t("cancel")}</Button>
+                  <LoadingButton type="submit">{t("update")}</LoadingButton>
                 </div>
               </Form>
             )}

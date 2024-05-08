@@ -56,7 +56,7 @@ const CardProduct = (
         </div>
 
         <div className='Card_Product_Mid' onClick={()=>navigate(`/product/${itemm.id}`)}>
-          <img src={ itemm?.product_main_image} onError={useImageError} alt={itemm?.name} width="100%" height="60%" />
+          <img src={ itemm?.product_main_image} onError={useImageError} alt={itemm?.name}  />
         </div>
 
         <div className='Card_Product_Bottom'  >

@@ -6,8 +6,9 @@
    //    min-width: 80vw
    // }
    .Cards{
-    @include Flex;
-    gap: 2%;
+      @include Flex;
+      gap: 2%;
+      margin-block: 20px !important;
    } 
 
 
@@ -15,7 +16,7 @@
    z-index: 0 !important;
    max-width: 90vw;
    min-width: 90vw;
-   min-height: 400px;
+   min-height: 300px;
    display: flex; justify-content: center; align-items: center;
  }
     .Card_Product{
@@ -88,6 +89,7 @@
       display: flex;justify-content: center;align-items: center;
       img{
          width: 70%;
+         z-index: 1;
          height: 100%;
          object-fit: contain !important;
          transition: all 0.3s ease-in-out;
@@ -279,7 +281,7 @@
          flex-direction: column;
          gap: 10px;
          svg{
-            opacity: 0;
+            // opacity: 0;
             &:hover{
                opacity: 1;
             }
@@ -290,7 +292,7 @@
       overflow: hidden; 
       flex: 60%;
       img{
-         width: 100%;
+         width: 80%;
          height: 100%;
          object-fit: cover;
             &:hover{
@@ -331,7 +333,7 @@
       &:hover{
       .Right{
          svg{
-            opacity: .2;
+            // opacity: .2;
             &:hover{
                opacity: 1;
             }
@@ -422,10 +424,6 @@
                }
             }
          }
-                  
-         .Right{
-            display: none !important; 
-            }
             .AddProduct{
                position: absolute;
                bottom: 20px;
@@ -463,7 +461,7 @@
   
 
 .swiper-android .swiper-slide, .swiper-ios .swiper-slide, .swiper-wrapper{
-   margin-bottom: 30px !important;
+   margin-bottom: 20px !important;
 }
 .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
    bottom: -10px;

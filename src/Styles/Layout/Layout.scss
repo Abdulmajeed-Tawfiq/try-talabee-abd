@@ -34,8 +34,11 @@
 .Header{
     .MenuChange,.ant-btn  {
         color: var(--text);
+        background: var(--secondary) !important;
+        transition: all .2s ease-in-out;
         &:hover{
-            background: var(--primary) !important;
+            background: var(--secondary) !important;
+            scale: 1.05;
         }
     }
 }
@@ -54,13 +57,7 @@
     background-color:var(--secondary);
     border-color:var(--secondary);
    }
-   
-   /* Ant steps icon */
-   .ant-steps-label-horizontal .ant-steps-item .ant-steps-icon{
-    color:var(--bg) !important;
-   }
 
-  
    .ant-radio-inner{
     background: var(--secondary) !important;
     border-color:  var(--secondary) !important;

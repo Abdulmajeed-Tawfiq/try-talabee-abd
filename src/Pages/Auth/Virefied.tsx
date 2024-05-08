@@ -69,7 +69,7 @@ const Virefied = () => {
     <Header />
     
       <Result
-      icon={<MailTwoTone twoToneColor={"#35c6c2"} height={8} />}
+      icon={<MailTwoTone twoToneColor={"#d90217"} height={8} />}
       className='Result'
       title={t("Verify Code Sent to Email")}
       subTitle={t("Please enter the verification code sent to your email to complete the verification process")}

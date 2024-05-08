@@ -18,7 +18,7 @@ const ProductsHeader = ({style,setstyle}:any) => {
       <div className='Products_Header_Left'>
       <WithDrawer
         className="showfillter"
-        title="ProductsFilter"
+        title=""
         button={ 
         <div className="Cart_Icon">
           <span>{t("Filter")}:</span><BsFillTerminalFill  />

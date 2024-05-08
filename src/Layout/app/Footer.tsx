@@ -20,7 +20,7 @@ const Footer = () => {
         className=" Footer_Header"
       
       >
-        <div className="">
+        <div className="footer_darkmode_white">
           <span>{t("Get connected with us on social networks")}:</span>
         </div>
     
@@ -33,29 +33,29 @@ const Footer = () => {
             {/* Grid column */}
             <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
               {/* Content */}
-              <h6 className="text-uppercase fw-bold">{t("Company name")}</h6>
+              <h6 className="text-uppercase fw-bold footer_darkmode_tefini">{t("Company name")}</h6>
               <hr
                 className="mb-4 mt-0 d-inline-block mx-auto"
                 style={{ width: 60, backgroundColor: "#7c4dff", height: 2 }}
               />
-              <p>
-                SDNone Company
+              <p className='footer_darkmode_tefini'>
+                Try Talabee
               </p>
             </div>
             {/* Grid column */}
             {/* Grid column */}
             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
               {/* Links */}
-              <h6 className="text-uppercase fw-bold">{t("Social Media")}</h6>
+              <h6 className="text-uppercase fw-bold footer_darkmode_tefini">{t("Social Media")}</h6>
               <hr
                 className="mb-4 mt-0 d-inline-block mx-auto"
                 style={{ width: 60, backgroundColor: "#7c4dff", height: 2 }}
               />
               <div className='Footer_social'>
                 <ul className='Media_Icon'>
-                  <li><a href="/"><BsFacebook/></a></li>
-                  <li><a href="/about"><BsGoogle/></a></li>
-                  <li><a href="/about"><BsInstagram/></a></li>
+                  <li><a href="/" className='footer_darkmode_tefini'><BsFacebook/></a></li>
+                  <li><a href="/about" className='footer_darkmode_tefini'><BsGoogle/></a></li>
+                  <li><a href="/about" className='footer_darkmode_tefini'><BsInstagram/></a></li>
                 </ul>
               </div>
             
@@ -64,28 +64,28 @@ const Footer = () => {
             {/* Grid column */}
             <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
               {/* Links */}
-              <h6 className="text-uppercase fw-bold">{t("Useful links")}</h6>
+              <h6 className="text-uppercase fw-bold footer_darkmode_tefini">{t("Useful links")}</h6>
               <hr
                 className="mb-4 mt-0 d-inline-block mx-auto"
                 style={{ width: 60, backgroundColor: "#7c4dff", height: 2 }}
               />
               <p>
-                <a href="/" className="text-white">
+                <a href="/" className="footer_darkmode_tefini">
                   {t("Home")}
                 </a>
               </p>
               <p>
-                <a href="/privacy" className="text-white">
+                <a href="/privacy" className="footer_darkmode_tefini">
                   {t("Privacy")}
                 </a>
               </p>
               <p>
-                <a href="/contact" className="text-white">
+                <a href="/contact" className="footer_darkmode_tefini">
                   {t("Contact us")}
                 </a>
               </p>
               <p>
-                <a href="/about" className="text-white">
+                <a href="/about" className="footer_darkmode_tefini">
                   {t("About us")}
                 </a>
               </p>
@@ -95,19 +95,19 @@ const Footer = () => {
             {/* Grid column */}
             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
               {/* Links */}
-              <h6 className="text-uppercase fw-bold">{t("Contact")}</h6>
+              <h6 className="text-uppercase fw-bold footer_darkmode_tefini">{t("Contact")}</h6>
               <hr
                 className="mb-4 mt-0 d-inline-block mx-auto"
                 style={{ width: 60, backgroundColor: "#7c4dff", height: 2 }}
               />
-              <p>
-                <i className="fas fa-home mr-3" /> 0963958261912
+              <p className='footer_darkmode_tefini'>
+                <i className="fas fa-home mr-3 " /> 0963958261912
               </p>
-              <p>
-                <i className="fas fa-envelope mr-3" /> info@sdnone.com
+              <p className='footer_darkmode_tefini'>
+                <i className="fas fa-envelope mr-3 " /> info@sdnone.com
               </p>
-              <p>
-                <i className="fas fa-home mr-3" /> Qatar, Doha
+              <p className='footer_darkmode_tefini'>
+                <i className="fas fa-home mr-3 " /> Qatar, Doha
               </p>
            
             </div>
@@ -119,10 +119,10 @@ const Footer = () => {
       {/* Section: Links  */}
       {/* Copyright */}
       <div
-        className="text-center p-3"
+        className="text-center p-3 footer_darkmode_tefini"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}>
         © 2024 Copyright SDNone Company<br/>
-        <a className="text-white" href="https://www.sdnone.net/" rel="noreferrer" target='_blank'>
+        <a className="footer_darkmode_tefini" href="https://www.sdnone.net/" rel="noreferrer" target='_blank'>
             https://www.sdnone.net
         </a>
       </div>

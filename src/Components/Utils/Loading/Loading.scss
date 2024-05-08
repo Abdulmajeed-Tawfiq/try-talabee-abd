@@ -103,6 +103,9 @@
 }
 
 
-:where(.css-dev-only-do-not-override-1ae8k9u).ant-spin .ant-spin-dot-item{
-  background-color: var(--primary);
+:where(.css-dev-only-do-not-override-1ae8k9u).ant-spin .ant-spin-dot-item ,:where(.css-1adbn6x).ant-spin .ant-spin-dot-item{
+  background-color: var(--secondary);
+}
+:where(.css-dev-only-do-not-override-1ae8k9u).ant-spin, :where(.css-1adbn6x).ant-spin .ant-spin-dot-item{
+  color: var(--secondary);
 }

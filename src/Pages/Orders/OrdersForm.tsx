@@ -68,6 +68,7 @@ const OrdersForm = ({data}:any) => {
     <>
       <div className='Header'> {t("Your All Order total is :")}  {data?.order_all_total} </div>
       <Table
+      className='order_table_container'
         onRow={(record, rowIndex) => {
           return {
             onClick: (event) => {

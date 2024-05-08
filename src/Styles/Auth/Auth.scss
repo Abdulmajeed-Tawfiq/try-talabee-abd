@@ -14,7 +14,7 @@
   }
 
 .Auth{
-    background: linear-gradient(to left, var(--primary), white);
+    background: linear-gradient(to right, var(--secondary), var(--graytoblack));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,12 +47,12 @@
 .container input {
     // padding: 15px !important;
     &:focus {
-        outline: 1px solid var(--primary) !important;
+        outline: 1px solid var(--secondary) !important;
     }
 }
 
 .container button{
-    background-color: var(--primary);
+    background-color: var(--secondary);
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -178,7 +178,7 @@
 }
 
 .toggle{
-    background-color: var(--primary);
+    background-color: var(--secondary);
     height: 100%;
     color: #fff;
     position: relative;
@@ -268,7 +268,7 @@
     }
     
     .container button{
-        background-color: var(--primary);
+        background-color: var(--secondary);
         color: #fff;
         font-size: 12px;
         padding: 10px 45px;
@@ -383,9 +383,9 @@
     }
     
     .toggle{
-        background-color: var(--primary);
+        background-color: var(--secondary);
         height: 100%;
-        background: linear-gradient(to right, #5c6bc0, var(--primary));
+        background: linear-gradient(to right, #5c6bc0, var(--secondary));
         color: #fff;
         position: relative;
         left: -100%;

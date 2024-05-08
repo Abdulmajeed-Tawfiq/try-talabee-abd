@@ -87,7 +87,6 @@ const BecomePartner: React.FC = () => {
             <Form.Label>{t('Product Price')} *</Form.Label>
             <Form.Control type="number" name="price" placeholder={t('enter Product price')} value={Price} onChange={(e)=>setPrice(e.target.value)} required />
           </Form.Group>
-          <label>{t("upolad_an_image")}</label>
           <File label={""} set={setClearIMageProduct} />
 
           <Button className='mt-4 w-100 button' type="submit">

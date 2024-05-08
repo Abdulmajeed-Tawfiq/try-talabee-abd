@@ -5,7 +5,7 @@
     justify-content: space-around !important;
     align-items: center;
     .Translate{
-        background-color: var(--primary);
+        background-color: var(--secondary) !important;
         border-radius: 5px;
         padding: 5px;
         transition: all 0.2s ease-in-out;
@@ -27,7 +27,7 @@
     width: 100%;
     margin-bottom: 10px;
     .Translate{
-        background-color: var(--primary) !important;
+        background-color: var(--secondary) !important;
         border-radius: 5px !important;
         padding: 5px !important;
         transition: all 0.2s ease-in-out !important;
