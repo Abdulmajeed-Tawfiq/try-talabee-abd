@@ -129,7 +129,14 @@ function RegisterForm({ handleLoginClick }: any) {
         </div>
 
         <LoadingButton isLoading={isLoading} type="submit">{t("Sign Up")}</LoadingButton >
-        <p className='navigateto' onClick={handleLoginClick} >{t("or login")}</p>
+        <p className='navigateto' onClick={() => {
+          handleLoginClick();
+          const containerElement = document.getElementById('container');
+          if (containerElement) {
+            containerElement.style.minHeight = "500px"
+            console.log("clicked");
+          }
+        }} >{t("or login")}</p>
 
       </Form>
       )}
