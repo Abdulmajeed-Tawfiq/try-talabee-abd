@@ -61,3 +61,14 @@ svg {
     }
 }
 
+// hover on antd button 
+:where(.css-dev-only-do-not-override-1ae8k9u).ant-btn-primary:not(:disabled):not(.ant-btn-disabled){
+    letter-spacing: 2px;
+}
+:where(.css-dev-only-do-not-override-1ae8k9u).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover{
+    transition: ease-in-out .5s;
+    background: var(--fourthly);
+    span{
+        color: var(--black);
+    }
+}

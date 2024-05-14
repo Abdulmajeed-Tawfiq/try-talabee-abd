@@ -25,8 +25,8 @@
 "email":"Email",
 "cancel":"Cancel",
 "edit":"Edit",
-"ligth":"Light",
-"dark":"Dark",
+"light":"Light Mode",
+"dark":"Dark Mode",
 "delete_are_you_sure":"Delete Are You Sure",
 "no_revert":"no Revert",
 "yes_delete_it":"Yes Delete it",
@@ -129,7 +129,7 @@
 "Details":"Details",
 "Billing Address":"Billing Address",
 "Pay with":"Pay with",
-"phone":"Phone",
+"Phone":"Phone",
 "Note":"Note",
 "Building Number":"Building Number",
 "Zone Number":"Zone Number",
@@ -271,8 +271,7 @@
 "Price To High": "Price To High",
 "Black Friday Sales Left": "Black Friday Sales Left",
 "PAY ONLY FOR YOUR LOVING ELECTRONICS" : "PAY ONLY FOR YOUR LOVING ELECTRONICS",
-"Country": "Country",
-"Edit your": "Edit your",
-"Profile": "Profile",
-"update": "update"
+"Country": "Country"
+
+
 }

@@ -8,6 +8,7 @@ import { login } from '../../Redux/auth/AuthReducer'
 import { useTranslation } from 'react-i18next'
 import { toast } from 'react-toastify'
 import AuthHeader from './HeaderComponent'
+import { getLoginValidationSchema } from '../profile/formUtils'
 
 function LoginForm({handleRegisterClick}:any) {
     const Navigate = useNavigate() 
@@ -17,13 +18,13 @@ function LoginForm({handleRegisterClick}:any) {
     
     
     const handelSubmit = (values:any)=>{
-        // mutate({
-        //     email:values['email'],
-        //     password:values['password']
-        //   })
+        mutate({
+            phone:values['phone'],
+            password:values['password']
+          })
 
-        Navigate('/', { replace: true })
-        toast.success('Logged in successfully')
+        // Navigate('/', { replace: true })
+        // toast.success('Logged in successfully')
       
       }
 
@@ -41,26 +42,29 @@ function LoginForm({handleRegisterClick}:any) {
   return (
     <div className="form-container sign-in">
   <Formik 
-        initialValues={{ email: '', password: '' }}
+        initialValues={{ phone: '', password: '' }}
+        validationSchema={getLoginValidationSchema()}
         onSubmit={handelSubmit}
       >
-      <Form >
-        <AuthHeader/>
-        <h1 >{t("Sign In")}</h1>
-        <div  className='login_dev'>
-          <label>{t("Email")}</label>
-          <Field name="email" type="email" placeholder={t('Email')} required autoFocus />
-        </div>
+      {({ errors, touched }) => (
+        <Form >
+          <AuthHeader/>
+          <h1 className='login_title' >{t("Sign In")}</h1>
+          <div  className='login_dev'>
+            <Field name="phone" type="text" placeholder={t('Phone')} />
+            {touched.phone && <label>{errors.phone}</label>}
+          </div>
 
-        <div className='login_dev'>
-          <label>{t("Password")}</label>
-          <Field name="password" type="password" placeholder={t("Password")} required />
-        </div>
+          <div className='login_dev'>
+            <Field name="password" type="password" placeholder={t("Password")} />
+            {touched.password && <label>{errors.password}</label>}
+          </div>
 
-        <LoadingButton  isLoading={isLoading}  >{t("Sign In")}</LoadingButton>
-        <p className='navigateto' onClick={handleRegisterClick} >{t("or Register")}</p> 
+          <LoadingButton isLoading={isLoading} type="submit" >{t("Sign In")}</LoadingButton>
+          <p className='navigateto' onClick={handleRegisterClick} >{t("or Register")}</p> 
 
-      </Form>
+        </Form>
+      )}
     </Formik>
   </div>
   )

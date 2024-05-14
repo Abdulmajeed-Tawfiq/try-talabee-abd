@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { useRegister } from '../../api/auth';
 import { LoadingButton } from '../../Components/Utils/Loading/LoadingButton';
 import { useDispatch } from 'react-redux';
-import { register } from '../../Redux/auth/AuthReducer';
 import { useTranslation } from 'react-i18next';
 // import Select from 'react-select'
 //@ts-ignore
@@ -14,6 +13,7 @@ import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
 import { USER_EMAIL } from '../../config/AppKey';
 import AuthHeader from './HeaderComponent';
+import { getRegisterValidationSchema } from '../profile/formUtils';
 
 function RegisterForm({ handleLoginClick }: any) {
   const navigate = useNavigate()
@@ -21,19 +21,19 @@ function RegisterForm({ handleLoginClick }: any) {
   const [t] = useTranslation()
   const dispatch = useDispatch()
   const [value, setValue] = useState('')
-  const [isVirfied, setisVirfied] = useState(false)
 
   const handelSubmit = (values: any) => {
-    // mutate(
-    //   {
-    //     name: values['name'],
-    //     email: values['email'],
-    //     password: values['password'],
-    //     country:value,
-    //     phone: values['phone']
-    //   }
-    // )
-      navigate('/verfied', { replace: true })
+    mutate(
+      {
+        name: values['name'],
+        email: values['email'],
+        password: values['password'],
+        phone: values['phone'],
+        birthday: values['birthday'],
+        gender: values['gender'],
+      }
+    )
+      // navigate('/verfied', { replace: true })
 
    return localStorage.setItem(USER_EMAIL , values.email );
   }
@@ -50,6 +50,8 @@ function RegisterForm({ handleLoginClick }: any) {
 
   const options = useMemo(() => countryList().getData(), [])
   const formik = useFormikContext();
+  console.log(formik);
+  
 
   const SelecthandleChange = (value:any,label:any) => {
 
@@ -75,42 +77,62 @@ function RegisterForm({ handleLoginClick }: any) {
   return (
     <div className="form-container sign-up">
       <Formik
-        initialValues={{ name: '', email: "", password: '',country:"", phone:"" }}
+        initialValues={{ name: '', email: "", password: '',country:"", phone:"", birthday:"", gender:"" }}
+        validationSchema={getRegisterValidationSchema}
         onSubmit={handelSubmit}
       >
+        {({ errors, touched }) => (
         <Form ref={form}>
           
-          <AuthHeader/>
-          <h2 >{t("Create Account")}</h2>
-          <div className='login_dev'>
-            <Field name="name" type="text" placeholder={t("Name")} />
-          </div>
+        <AuthHeader/>
+        <h2>{t("Create Account")}</h2>
+        <div className='login_dev'>
+          <Field name="name" type="text" placeholder={t("Name")} />
+          {touched.name && <label>{errors.name}</label>}
 
-          <div className='login_dev'>
-            <Field name="email" type="email" placeholder={t("Email")} />
-          </div>
 
-          {/* <div className='login_dev'>
-            <Select
-            style={{ width: "100%" }}
-            onChange={SelecthandleChange}
-            options={options}
-            placeholder="choose your country"
-            />
-          </div> */}
+        </div>
 
-          <div className='login_dev'>
-            <Field  name="phone" type="text" placeholder={t("phone")} />
-          </div>
+        <div className='login_dev'>
+          <Field name="email" type="email" placeholder={t("Email")} />
+          {touched.email && <label>{errors.email}</label>}
+        </div>
 
-          <div className='login_dev'>
-            <Field name="password" type="password" placeholder={t("password")} />
-          </div>
+        {/* <div className='login_dev'>
+          <Select
+          style={{ width: "100%" }}
+          onChange={SelecthandleChange}
+          options={options}
+          placeholder="choose your country"
+          />
+        </div> */}
 
-          <LoadingButton isLoading={isLoading}>{t("Sign Up")}</LoadingButton >
-          <p className='navigateto' onClick={handleLoginClick} >{t("or login")}</p>
+        <div className='login_dev'>
+          <Field  name="phone" type="text" placeholder={t("phone")} />
+          {touched.phone && <label>{errors.phone}</label>}
+        </div>
 
-        </Form>
+        <div className='login_dev'>
+          <Field name="password" type="password" placeholder={t("password")} />
+          {touched.password && <label>{errors.password}</label>}
+
+        </div>
+        <div className='login_dev birth_gender'>
+          {/* <DatePicker name="birthday" type="birthday" className='date_picker' placeholder={t("Birthday")} /> */}
+          <input type="date" placeholder= {t("Birthday")} name="birthday" className='date_picker'  />
+
+          <select name="gender" style={{ color: 'var(--textGray) ' }} >
+            <option value="" defaultChecked hidden >Gender</option>
+            <option value="male" style={{ color: 'var(--black) ' }}>Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+
+        <LoadingButton isLoading={isLoading} type="submit">{t("Sign Up")}</LoadingButton >
+        <p className='navigateto' onClick={handleLoginClick} >{t("or login")}</p>
+
+      </Form>
+      )}
       </Formik>
 
     </div>

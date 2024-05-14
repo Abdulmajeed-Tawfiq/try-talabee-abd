@@ -7,13 +7,13 @@
     padding: 0 10vw;
     gap: 50px;
     .button {
-        background-color: var(--fourthly) ;
+        background-color: var(--secondary) ;
         color: var(--white);
         font-weight: bold;
         outline: none;
         border: none;
         &:hover {
-            background-color: var(--secondary);
+            background-color: var(--fourthly);
         }
     }
     >div {
@@ -160,7 +160,7 @@
     .BecomePartner{
         button{
             background: transparent !important;
-            color: var(--fourthly) !important;
+            color: var(--secondary) !important;
         }
     }
 }

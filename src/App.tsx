@@ -8,7 +8,6 @@ import BecomePartner from './Pages/Become Partner/BecomePartner';
 import LoadingAntd from './Components/Utils/Loading/LoadingAntd';
 // import Profile from './Pages/profile/Profile';
 
-
 const CheckPaymentPage  =  lazy(()=>import('./Pages/paymentRedirect/Page'));
 const Page404 = lazy(() => import("./Layout/app/NotFoundPage"))
 const SuccessPayment = lazy(() => import("./Pages/SuccessPayment/Page"))

@@ -60,7 +60,7 @@
         }
     }
     :where(.css-dev-only-do-not-override-1ae8k9u).ant-result .ant-result-subtitle{
-        color:var(--black);
+        color:var(--blacktowhite);
         opacity: .9;
         font-weight: bold;
     }
@@ -72,6 +72,7 @@
 }
 :where(.css-dev-only-do-not-override-1ae8k9u).ant-result .ant-result-title{
     font-weight: bold;
+    color: var(--blacktowhite);
 }
 .SuccessVerify_container{
     display: flex;

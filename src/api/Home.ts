@@ -1,8 +1,7 @@
 import useGetQuery from "./helper/useGetQuery"
 
 const API = {
-    GET:"/api/home/getAll"
-
+    GET:"/api/home"
 }
 
 const KEY = "HOME"

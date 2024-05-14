@@ -9,9 +9,27 @@
 
 .login_dev{
     width: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
   
   }
+.birth_gender {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    .date_picker {
+        margin: auto;
+        height: 80%;
+    }
+    select { 
+        color: var(--textGray);
+    }
+    option { 
+        color: var(--black);
+    }
+    :where(.css-dev-only-do-not-override-1ae8k9u).ant-picker-outlined:hover {
+        border-color: var(--secondary);
+    }
+}
 
 .Auth{
     background: linear-gradient(to right, var(--secondary), var(--graytoblack));
@@ -30,7 +48,7 @@
     overflow: hidden; //
     width: 768px;
     max-width: 100%;
-    min-height: 500px;
+    min-height: 550px;
 }
 
 .container p{
@@ -90,10 +108,10 @@
     height: 100%;
 }
 
-.container input{
+.container input , .container select {
     background-color: #eee;
     border: none;
-    margin: 8px 0;
+    margin: 0;
     padding: 10px 15px;
     font-size: 13px;
     border-radius: 8px;
@@ -106,6 +124,13 @@
     top: 0;
     height: 100%;
     transition: all 0.6s ease-in-out;
+
+    label {
+        color: var(--secondary);
+        margin-left: 10px;
+        font-size: 12px;
+        height: 1px;
+    }
 }
 
 .sign-in{
@@ -114,6 +139,16 @@
     z-index: 2;
     
 
+}
+
+.login_title {
+    margin-block: 30px;
+    +.login_dev {
+        margin-bottom: 30px;
+        +.login_dev {
+        margin-bottom: 30px;
+        }
+    }
 }
 
 .container.active .sign-in{
@@ -244,9 +279,9 @@
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
         position: relative;
         overflow: hidden; 
-        width: 368px;
+        width: 80%;
         max-width: 100%;
-        min-height: 480px;
+        min-height: 600px;
     }
     
     .container p{
@@ -277,7 +312,6 @@
         font-weight: 600;
         letter-spacing: 0.5px;
         text-transform: uppercase;
-        margin-top: 10px;
         cursor: pointer;
     }
     
@@ -292,14 +326,14 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        padding: 0 40px;
+        padding: 0 50px;
         height: 100%;
     }
     
     .container input{
         background-color: #eee;
         border: none;
-        margin: 8px 0;
+        margin: 0;
         padding: 10px 15px;
         font-size: 13px;
         border-radius: 8px;
@@ -312,6 +346,13 @@
         top: 0;
         height: 100%;
         transition: all 0.6s ease-in-out;
+
+        label {
+            color: var(--secondary);
+            margin-left: 10px;
+            font-size: 12px;
+            height: 1px;
+        }
     }
     
     .sign-in{
@@ -436,6 +477,15 @@
 
 }
 
+@media screen and (max-width: 400px) {
+    .container {
+        width: 90%;
+        form {
+            padding: 0 25px !important;
+        }
+    }
+
+}
 .rtl_direction {
     left: 0% !important;
 }

@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import { Button, Form } from "react-bootstrap";
 import Layout from "../../Layout/app/Layout";
 import { LoadingButton } from "../../Components/Utils/Loading/LoadingButton";
-import { getInitialValues, getValidationSchema } from "./formUtils";
+import { getInitialValues, getRegisterValidationSchema } from "./formUtils";
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 
@@ -31,7 +31,7 @@ function Profile() {
         <div className="profile_form" >
           <Formik
             initialValues={getInitialValues()}
-            validationSchema={getValidationSchema()}
+            validationSchema={getRegisterValidationSchema()}
             onSubmit={handleSubmit}
           >
             {(formik) => (

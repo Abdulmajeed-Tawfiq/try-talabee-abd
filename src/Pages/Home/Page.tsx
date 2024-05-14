@@ -7,26 +7,15 @@ import BigAds from '../../Components/Home/BigAds'
 import { BigAdsData, CategoriesData, MovesAdsData, specialPropertiesData } from './HomeData'
 import CategoriesSwiper from '../../Components/Home/CategoriesSwiper'
 import {useHeroSectionData, useProductData} from '../../Redux/DispatchData'
-import { useEffect, useState } from 'react'
 import StaticAds from '../../Components/Home/StaticAds'
+import { useWindowResize } from '../../Hooks/useWindowResize'
 
 
 const Page = () => {
 
     const { Product } = useProductData()
     const { DataHeroSection } = useHeroSectionData();
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-    useEffect(() => {
-      const handleResize = () => {
-        setWindowWidth(window.innerWidth);
-      };
-      window.addEventListener('resize', handleResize);
-      // Cleanup function to remove the event listener
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-   }, []);
+    const { windowWidth,handleResize } = useWindowResize();
 
   return (
     <Layout className='HomePage'>
