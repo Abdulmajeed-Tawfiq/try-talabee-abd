@@ -133,7 +133,7 @@ function RegisterForm({ handleLoginClick }: any) {
           handleLoginClick();
           const containerElement = document.getElementById('container');
           if (containerElement) {
-            containerElement.style.minHeight = "500px"
+            containerElement.style.height = "500px"
             console.log("clicked");
           }
         }} >{t("or login")}</p>

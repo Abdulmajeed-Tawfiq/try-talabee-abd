@@ -65,10 +65,10 @@ function LoginForm({handleRegisterClick}:any) {
           handleRegisterClick();
           const containerElement = document.getElementById('container');
           if (containerElement) {
-            containerElement.style.minHeight = "600px"
+            containerElement.style.height = "600px"
             console.log("clicked");
           }
-        }} >{t("or login")}</p>
+        }} >{t("or Register")}</p>
 
         </Form>
       )}
