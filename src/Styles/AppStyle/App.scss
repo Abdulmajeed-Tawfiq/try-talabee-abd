@@ -66,9 +66,9 @@ svg {
     letter-spacing: 2px;
 }
 :where(.css-dev-only-do-not-override-1ae8k9u).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover{
-    transition: ease-in-out .5s;
-    background: var(--fourthly);
+    transition: ease-in-out .3s;
+    background: var(--primary);
     span{
-        color: var(--black);
+        color: var(--white);
     }
 }

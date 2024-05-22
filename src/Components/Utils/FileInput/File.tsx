@@ -24,7 +24,7 @@ const File = ({  label,set }: any) => {
   };
 
   return (
-    <div className="KarimField">
+    <div className="TalabeeField">
       <label htmlFor={label} className="text" >
         {(`${label}`)}
       </label>

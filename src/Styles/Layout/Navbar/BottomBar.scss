@@ -31,7 +31,7 @@
         font-size: 1.4vw;
         h1{
             text-transform:capitalize;
-            font-size: 18px;
+            font-size: 17px;
             @include underLineText(var(--blacktowhite), var(--secondary));
             margin-bottom: 0;
         }
@@ -152,9 +152,3 @@
        
       
    }
-// @media screen and (max-width: 725px) and (min-width: 850px) {
-//     .ar .NavMenus .Link h1 {
-//         // font-size: 16px !important;
-//     }
-    
-// }

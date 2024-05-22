@@ -175,11 +175,11 @@
     }
     
     // partner image blend mode 
-    .partner_image{
+    .partner_image, .join_family_image{
         mix-blend-mode: hard-light !important;
     }
     
-    .KarimField{
+    .TalabeeField{
         :where(.css-1adbn6x).ant-btn >span , .anticon svg{
             color: var(--white) !important;
         }

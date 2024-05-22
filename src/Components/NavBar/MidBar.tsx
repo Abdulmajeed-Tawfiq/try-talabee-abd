@@ -62,8 +62,9 @@ const MidBar = () => {
               <Link className='Link_NavMenu' to={'/'} >  <h1><span><TbPointFilled/></span> {t("Home")}</h1> </Link>
               <Link className='Link_NavMenu' to={'/about'} >  <h1><span><TbPointFilled/></span>  {t("about")}</h1> </Link>
               <Link className='Link_NavMenu' to={'/contact'} >  <h1><span><TbPointFilled/></span> {t("contact")}</h1> </Link>
-              <Link className='Link_NavMenu' to={'/partner'} >  <h1><span><TbPointFilled/></span> {t("partner")}</h1> </Link>
+              <Link className='Link_NavMenu' to={'/joinFamily'} >  <h1><span><TbPointFilled/></span> {t("joinFamily")}</h1> </Link>
               <Link className='Link_NavMenu' to={'/products'} >  <h1><span><TbPointFilled/></span> {t("Products")}</h1> </Link>
+              <Link className='Link_NavMenu' to={'/stores'} >  <h1><span><TbPointFilled/></span> {t("stores")}</h1> </Link>
               <Link className='Link_NavMenu' to={'/orders'} >  <h1><span><TbPointFilled/></span> {t("orders")}</h1> </Link>
               <Link className='Link_NavMenu' to={'/privacy'} >  <h1><span><TbPointFilled/></span> {t("Privacy")}</h1> </Link>
               <Link className='Link_NavMenu' to={'/favourite'} >  <h1><span><TbPointFilled/></span> {t("favourite")}</h1> </Link>

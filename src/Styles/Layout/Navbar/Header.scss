@@ -10,7 +10,6 @@
         justify-content: space-between;
         text-align: center;
         align-items: center;
-        // width: 100%;
     }
     h1{
         font-size: 18px;
@@ -28,7 +27,6 @@
             padding: 0;
             h1 , .Link{
                 color: var(--white);
-                // font-size: 10px;
             }
             .Link {
                 cursor: pointer;
@@ -43,9 +41,6 @@
                 }
             }
 
-            // &:hover {
-            //     scale: 1.06;
-            // }
         }
     }
 }

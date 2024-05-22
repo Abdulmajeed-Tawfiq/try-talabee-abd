@@ -6,6 +6,15 @@
     flex-direction: column;
     background: linear-gradient(to left, var(--secondary), var(--graytoblack));
     height: 100vh;
+    
+    .auth_header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin-block: 50px 10px;
+    }
+
     .Result {
         padding: 0 !important;
         color: var(--secondary);

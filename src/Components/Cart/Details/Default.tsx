@@ -9,7 +9,7 @@ const Default = ({ name, label, placeholder, isDisabled, onChange, props }: any)
   
 
   return (
-    <div className="KarimField w-100" >
+    <div className="TalabeeField w-100" >
       <label htmlFor={name} className="text">
         {t(`${label ?  label : name}`)}
         </label>

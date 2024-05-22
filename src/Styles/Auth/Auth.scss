@@ -4,21 +4,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // font-family: 'Montserrat', sans-serif;
 }
 
 .login_dev{
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   
   }
-.birth_gender {
+.one_row_dev {
     display: grid;
-    gap: 10px;
+    gap: 20px;
     grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 12px;
     .date_picker {
-        margin: auto;
         height: 80%;
+        margin: auto;
+        height: 32px !important;
+        margin-top: 24px;
+        input{
+            background: inherit !important; 
+            &:focus{
+                outline : none !important;
+            }
+        }
     }
     select { 
         color: var(--textGray);
@@ -30,6 +38,22 @@
         border-color: var(--secondary);
     }
 }
+:where(.css-dev-only-do-not-override-1ae8k9u).ant-form-item .ant-form-item-explain-error{
+    font-size: 10px !important;
+}
+
+.birthday_elements {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 5px;
+    .birthday {
+      height: 32px;
+      border: 1px solid #d9d9d9;
+      border-radius: 5px;
+      padding: 10px;
+    }
+  }
 
 .Auth{
     background: linear-gradient(to right, var(--secondary), var(--graytoblack));
@@ -38,7 +62,6 @@
     justify-content: center;
     flex-direction: column;
     height: 100vh;
-    // padding-block: 20px 100px;
 
 .container{
     background-color: var(--bg);
@@ -46,29 +69,25 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
     overflow: hidden; //
-    width: 768px;
+    width: 800px;
     max-width: 100%;
-    min-height: 550px;
+    min-height: 570px;
 }
 
-.container p{
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.3px;
-    margin: 20px 0;
-}
 
-.container span{
-    font-size: 12px;
-}
 
-.container input {
-    // padding: 15px !important;
+.container .TalabeeField {
+    .ant-form-item ,.text{
+        margin-bottom: 2px !important;
+    }
     &:focus {
-        outline: 1px solid var(--secondary) !important;
+        border-color: var(--secondary) !important;
+        outline: 1px solid var(--secondary)  ;
     }
 }
-
+:where(.css-dev-only-do-not-override-1ae8k9u).ant-input-affix-wrapper{
+    padding: 7px 12px !important;
+}
 .container button{
     background-color: var(--secondary);
     color: #fff;
@@ -109,14 +128,7 @@
 }
 
 .container input , .container select {
-    background-color: #eee;
-    border: none;
-    margin: 0;
-    padding: 10px 15px;
-    font-size: 13px;
-    border-radius: 8px;
     width: 100% ;
-    outline: none;
 }
 
 .form-container{
@@ -126,10 +138,8 @@
     transition: all 0.6s ease-in-out;
 
     label {
-        color: var(--secondary);
-        margin-left: 10px;
         font-size: 12px;
-        height: 1px;
+        text-transform: capitalize;
     }
 }
 
@@ -330,16 +340,6 @@
         height: 100%;
     }
     
-    .container input{
-        background-color: #eee;
-        border: none;
-        margin: 0;
-        padding: 10px 15px;
-        font-size: 13px;
-        border-radius: 8px;
-        width: 100%;
-        outline: none;
-    }
     
     .form-container{
         position: absolute;
@@ -347,12 +347,6 @@
         height: 100%;
         transition: all 0.6s ease-in-out;
 
-        label {
-            color: var(--secondary);
-            margin-left: 10px;
-            font-size: 12px;
-            height: 1px;
-        }
     }
     
     .sign-in{

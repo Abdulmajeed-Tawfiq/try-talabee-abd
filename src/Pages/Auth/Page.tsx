@@ -36,9 +36,7 @@ const Auth = () => {
         />
 
         <LoginForm  
-          handleRegisterClick={handleRegisterClick}
-        
-        />
+          handleRegisterClick={handleRegisterClick}/>
 
         <div className="toggle-container ">
           <div className={`${getComputedStyle(document.body).direction === 'rtl' && !isActive ? "rtl_direction" : ""} toggle`} >

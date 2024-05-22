@@ -1,11 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from './store';
 import { setProductData } from './Slice/productSlice';
-import { AllProductdata, Cartdata, HeroSectionData, ProductSectionData } from '../Pages/Home/HomeData';
+import { AllProductdata, Cartdata, HeroSectionData, ProductSectionData, StoreSectionData } from '../Pages/Home/HomeData';
 import { setHeroSectionData } from './Slice/heroSectionSlice';
 import { useEffect } from 'react';
 import { setCartData } from './Slice/cartSlice';
 import { setAllProduct } from './Slice/AllProductsSlice';
+import { setStoreData } from './Slice/StoreSlice';
 
 
 export const useProductData = () => {
@@ -15,6 +16,15 @@ export const useProductData = () => {
   dispatch(setProductData(ProductSectionData));
   }, [dispatch]);
   return { Product, dispatch };
+};
+
+export const useStoreData = () => {
+  const Store = useSelector((state: RootState) => state.Store.value);
+  const dispatch = useDispatch();
+   useEffect(() => {
+  dispatch(setStoreData(StoreSectionData));
+  }, [dispatch]);
+  return { Store, dispatch };
 };
 
 

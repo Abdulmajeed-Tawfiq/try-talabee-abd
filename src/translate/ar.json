@@ -128,6 +128,7 @@
 "Billing Address": "عنوان الفواتير",
 "Pay with": "الدفع بواسطة",
 "Phone": "الهاتف",
+"phone": "الهاتف",
 "Note": "ملاحظة",
 "Building Number": "رقم المبنى",
 "Zone Number": "رقم المنطقة",
@@ -215,7 +216,7 @@
 "ClearIMageCoins":" صور واضحة للعملات",
 "upload_image":"رفع صورة",
 "Your Email has been verfied successfully":"لقد تم التحقق من بريدك الإلكتروني بنجاح",
-"You can continue using the website":"يمكنك الاستمرار في استخدام الموقع",
+"You can log in to the website now.":"يمكنك تسجيل الدخول إلى الموقع الآن",
 "Verify Code Sent to Email":"تحقق من الرمز المرسل إلى البريد الإلكتروني",
 "Please enter the verification code sent to your email to complete the verification process":"الرجاء إدخال رمز التحقق المرسل إلى بريدك الإلكتروني لإكمال عملية التحقق.",
 "Resend Code":"أعد إرسال الرمز",
@@ -241,7 +242,7 @@
 "In Stock":"منتهي",
 "On Sale":"خصومات",
 "Add To Favourite":"اضافة الى المفضلة",
-"title":"العنوان",
+"title":"منتجات مميزة",
 
 "pending":"قيد الانتظار",
 "canceled":"ملغي",
@@ -273,6 +274,27 @@
 "Country": "الدولة",
 "Edit your": "تعديل",
 "Profile": "الملف الشخصي",
-"update": "تحديث"
+"update": "تحديث",
+"Male":"ذكر",
+"Female":"أنثى",
+"Gender":"الجنس",
+"Join Our Family":"انضم الى عائلتنا",
+"Become Rider":"كن سائقا",
+"Order Info":"معلومات الطلب",
+"Your Personal Information":"معلوماتك الشخصية",
+"Become A Star":"كن نجما",
+"Market Place":"متجر",
+"Valid Commercial Registration":"سجل تجاري ساري المفعول",
+"Selection Type":"نوع الاختيار",
+"stores": "المتاجر",
+"Birthday":"يوم ميلادك",
+"is requierd":"مطلوب",
+"user":"المستخدم",
+"role":"دور",
+"first_name": "الاسم الأول",
+"last_name": "الاسم الأخير",
+"Successfully Registered": "تم التسجيل بنجاح"
+
+
 
 }

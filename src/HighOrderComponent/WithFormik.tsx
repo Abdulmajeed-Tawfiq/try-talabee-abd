@@ -3,19 +3,17 @@ import React from 'react'
 import * as Yup from "yup";
 
 
-const WithFormik = ({children}:any) => {
-    
-    const getInitialValues = () => { return { name:  ""}};
-    const getValidationSchema = ()=> { return Yup.object().shape({} ) }
-    const handleSubmit = ()=>{}
+const WithFormik = ({children , handleSubmit , getInitialValues , getValidationSchema}:WithFormikProps) => {
 
   return (
     <div className='WithFormik'>
       {
       <Formik
-      onSubmit={handleSubmit }
-      initialValues={getInitialValues}
-      validationSchema={getValidationSchema}>
+      initialValues={getInitialValues()}
+      validationSchema={getValidationSchema()}
+      onSubmit={handleSubmit}
+      enableReinitialize
+      >
         {(formik) => (
           <Form>
             {children}
@@ -28,3 +26,10 @@ const WithFormik = ({children}:any) => {
 }
 
 export default WithFormik
+
+interface WithFormikProps {
+  children: React.ReactNode; 
+  handleSubmit: (values: any, formikHelpers: any) => void; 
+  getInitialValues: () => any; 
+  getValidationSchema: () => Yup.Schema<any>; 
+}

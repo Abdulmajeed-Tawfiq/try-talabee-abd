@@ -1,5 +1,5 @@
 import { CarFilled, MoneyCollectOutlined, PayCircleFilled } from "@ant-design/icons"
-import { TBigAdsData, TCardProduct, THeroAd, TMovesAdsData, TProduct, TSpecialProperty, TbannerData } from "../../Layout/app/Types"
+import { TBigAdsData, TCardProduct, TCardStore, THeroAd, TMovesAdsData, TProduct, TSpecialProperty, TStore, TbannerData } from "../../Layout/app/Types"
 import { BsCalendarDay } from "react-icons/bs"
 import { IoIosFlash } from "react-icons/io"
 
@@ -15,10 +15,21 @@ import { IoIosFlash } from "react-icons/io"
     description:"Wireless Bluetooth HeadsetFM Frequency Response: 87.5 108 MHz Feature: FM Radio, Card Supported (Micro SD / TF)Made in China",
     type:"Neck Sweater",
     count:1,
+  } 
 
+ export const Store =   {
+    id : 1,
+    name:"Store Name",
+    img : "../store/store.png",
+    off : 15,
+    rate:4.5,
+    description:" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ut maiores vel illo iste architecto ex quis expedita, ducimus dolorum magni asperiores laboriosam inventore, qui molestias fuga recusandae! Neque, enim. ",
+    type:"Neck Sweater",
+    count:1,
   } 
   export const AllProductdata :TProduct[] = [  Product,Product,Product,Product,Product,Product,Product,Product,Product,Product ,Product,Product,Product,Product,Product  ] 
  export const data :TProduct[] = [  Product,Product,Product,Product,Product ] 
+ export const StoreData :TStore[] = [  Store,Store,Store,Store,Store] 
   export const Cartdata :TProduct[] = [  Product,Product,Product ] 
 
     export  const ProductSectionData: TCardProduct ={
@@ -28,6 +39,15 @@ import { IoIosFlash } from "react-icons/io"
        count:10,
        icon:<IoIosFlash />
       }
+
+    export  const StoreSectionData: TCardStore ={
+        data :StoreData,
+        title:"Stores" ,
+        href:"/stores" ,
+       count:10,
+       icon:<IoIosFlash />
+      }
+
    export  const CategoriesData : string[] = ["Toys","Sports","Gaming","Furniture","Fashion","Cameras"]
  export const BigAdsData:TBigAdsData[]= [
     {

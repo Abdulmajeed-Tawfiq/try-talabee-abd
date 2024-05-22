@@ -21,6 +21,19 @@
         padding:  10px 10px 10px 10px;
       
         font-size: 20px;
+        padding: 5px;
+
+        .seeMore {
+            background-color: var(--primary);
+            border-radius: 6px;
+            color: var(--white);
+            padding: 5px 10px;
+            font-size: 12px;
+
+            a {
+                font-weight: normal;
+            }
+        }
    
       }
       .HeroSection{

@@ -36,6 +36,26 @@ export type Tchildren = {
        count: number;
        icon:any
   }
+
+  
+  export type TStore= {
+    id : number
+    name:string,
+    img:string;
+    rate:number,
+    off :number,
+    description:string,
+    type:string
+    count:number
+  }
+
+  export type TCardStore = {
+    title : string;
+     href:string;
+      data : TStore[] ;
+       count: number;
+       icon:any
+  }
   
   export type TSubTitle = {
     title : string;
