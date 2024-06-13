@@ -10,7 +10,7 @@ interface CartItemProps {
 
 const CardItem: React.FC<CartItemProps> = ({ data }) => {
   const [loading, resetLoading] = useLoadingState(true, 2000);
-  const [Counter, setCounter] = useState<number>(data?.count);
+  const [Counter, setCounter] = useState<number>(2);
   const [Price, setPrice] = useState<number>(data?.price);
 
   return (
@@ -22,11 +22,11 @@ const CardItem: React.FC<CartItemProps> = ({ data }) => {
           <Button shape="circle" icon={<MinusCircleOutlined />} onClick={() => { setCounter(v => v > 1 ? --v : v); setPrice(v => Counter > 1 ? v / 2 : v) }} />
         </span>
         <span className='Card_Img'>
-          <img alt='' src={data?.img}  />
+          <img alt='' src={data?.images[0].image} />
         </span>
         <span className='Card_Info'>
           <h5>{data.name}</h5>
-          <h6>{data.type  }</h6>
+          <h6>{data.description}</h6>
           <strong>${Price}.00</strong>
         </span>
         <span className='Card_Delete'>

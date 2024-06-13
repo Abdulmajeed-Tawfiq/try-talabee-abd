@@ -3,7 +3,7 @@
     background: var(--secondary );
     color: var(--bg);
     height: 40px;
-    padding-inline: 5vw;
+    padding-inline: 2vw;
    
     .top_bar {
         display: flex;
@@ -29,6 +29,8 @@
                 color: var(--white);
             }
             .Link {
+                @include Flex;
+                gap: 3px;
                 cursor: pointer;
                 transition: all 0.3s ease;
                 svg {
@@ -135,3 +137,53 @@
     display: none;
 }
 
+.profile_modal {
+    position: absolute;
+    background-color: var(--bg);
+    right: 2%;
+    top: 7%;
+    z-index: 10;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    font-size: 18px;
+    color: var(--black);
+    transition: all 0.3s ease;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: self-end;
+    width: fit-content;
+    padding: 15px 20px;
+
+    hr {
+        width: 100%;
+    }
+
+    button {
+      @include Flex;
+      gap: 5px;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      p {
+        margin: 0;
+      }
+    }
+    .first_button {
+        &:hover {
+            background-color: var(--primary);
+          }
+    }
+  }
+  
+.ar {
+    .profile_modal {
+        left: 2%;
+        right: inherit;
+    }
+}

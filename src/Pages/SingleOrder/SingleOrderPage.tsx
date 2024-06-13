@@ -1,6 +1,4 @@
-import React from 'react'
 import Layout from '../../Layout/app/Layout';
-import { useGetSingleOrder } from '../../api/cart';
 import { useSelector } from 'react-redux';
 import { Currency } from '../../Layout/app/Const';
 import OrderStatus from '../../Components/Order/OrderStatus';
@@ -19,18 +17,17 @@ import {
     MDBCardImage,
     MDBCol,
     MDBContainer,
-    MDBProgress,
-    MDBProgressBar,
     MDBRow,
     MDBTypography,
   } from "mdb-react-ui-kit";
+import NotAuth from '../../Layout/app/NotAuth';
 
   export default function SingleOrderPage() {
     
     const {t} = useTranslation();
     const  [search]= useSearchParams()
     const  order_id = search.get('order_id')
-    const  {user}= useSelector((state:any)  => state.auth)
+    const  {user, isAuthenticated}= useSelector((state:any)  => state.auth)
     
     // const {data, isLoading , isError} = useGetSingleOrder({order_id})
     const order = fakeOrder 
@@ -44,7 +41,9 @@ import {
 
     return (
       <Layout className='without_background single_order'>
-        <section
+        {
+          isAuthenticated ? 
+          <section
           className="h-100 gradient-custom single_order"
           style={{ backgroundColor: "#eee" }}
         >
@@ -174,6 +173,8 @@ import {
             </MDBRow>
           </MDBContainer>
         </section>
+        : <NotAuth />
+        }
       </Layout>
     );
   }

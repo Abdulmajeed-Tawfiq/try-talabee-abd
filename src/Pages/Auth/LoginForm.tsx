@@ -28,7 +28,7 @@ function LoginForm({ handleRegisterClick }: any) {
 
   useEffect(() => {
     if (isSuccess) {
-      // dispatch(login((data as any )?.data))
+      dispatch(login((data as any)?.data))
       Navigate('/', { replace: true })
       toast.success('Logged in successfully')
       // Store the token in localStorage

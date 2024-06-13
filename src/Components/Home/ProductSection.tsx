@@ -2,29 +2,29 @@ import React from 'react'
 import SubTitle from './SubTitle'
 import CardSwiper from './CardSwiper'
 import { TCardProduct } from '../../Layout/app/Types'
+import { IoIosFlash } from 'react-icons/io'
 
 type TProductSection = {
-  data: TCardProduct 
+  data: TCardProduct[]
 }
 
 const ProductSection: React.FC<TProductSection> = ({ data }) => {
-  const { title, href, count, icon } = data
-  const TitleProps = { title, href, count, icon }
-  if (data?.data?.length > 0) {
-    return (
+  console.log(data);
 
-      <div className='ProductSection pb-5'>
-        <SubTitle {...TitleProps} />
+
+  const TitleProps = { name: "Products", href: "/product", icon: <IoIosFlash /> }
+  return (
+    <div className='ProductSection pb-5'>
+      <SubTitle {...TitleProps} />
+      {data?.length === 0
+        ? <div style={{ textAlign: "center" }}>there is no products on this Store</div>
+        :
         <div className='Cards'>
-          <CardSwiper data={data?.data} />
+          <CardSwiper data={data} />
         </div>
-      </div>
-    )
-  }
-  else{
-    return null
-  }
-
+      }
+    </div>
+  )
 }
 
 export default ProductSection

@@ -2,14 +2,14 @@ import React from 'react'
 import { Badge, Tooltip } from 'antd'
 import { ShoppingCartOutlined } from '@ant-design/icons'
 import { useNavigate } from 'react-router-dom'
-import { useCartData } from '../../Redux/DispatchData'
+// import { useCartData } from '../../Redux/DispatchData'
 import { useTranslation } from 'react-i18next'
 
 const ViewCart = () => {
   
-  const { count} = useCartData()
+  const count = 2
   const {t} = useTranslation();
-  const navigate = useNavigate()
+  const navigate = useNavigate() 
 
   return (
     <div className='ViewCart'>

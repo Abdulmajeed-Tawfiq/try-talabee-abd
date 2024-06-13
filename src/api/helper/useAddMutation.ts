@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 type AxiosResponse = {
   message: string;
-  data:any
+  data: any
 };
 
 function useAddMutation(key: string, url: string): UseMutationResult<AxiosResponse, unknown, any, unknown> {
@@ -22,11 +22,11 @@ function useAddMutation(key: string, url: string): UseMutationResult<AxiosRespon
       onSuccess: (data) => {
         queryClient.invalidateQueries([key]);
       },
-      onError: (error:any) => {
-          
-        if(error.response.status == 401 || error?.response?.status == 403){
+      onError: (error: any) => {
+
+        if (error?.response?.status == 401 || error?.response?.status == 403) {
           toast.error(t("Please Login First"))
-        }else{
+        } else {
 
           const message = error?.response?.data?.message || t("failed_to_add_data");
           toast.error(message);

@@ -14,7 +14,6 @@ function JoinFamilyForm() {
   const formik = useFormikContext()
   const { t } = useTranslation();
 
-  // console.log(formik.getFieldProps('type').value);
 
   return (
     <>

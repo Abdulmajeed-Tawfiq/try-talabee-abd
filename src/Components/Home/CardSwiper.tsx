@@ -14,7 +14,7 @@ interface CardSwiperProps {
 
 const CardSwiper: React.FC<CardSwiperProps> = ({ data }) => {
 
-  const language =  localStorage.getItem('languae')
+  const language = localStorage.getItem('languae')
 
   const [swiperDirection, setSwiperDirection] = useState<"rtl" | "ltr">("ltr");
 
@@ -30,7 +30,7 @@ const CardSwiper: React.FC<CardSwiperProps> = ({ data }) => {
         slidesPerView={3}
         spaceBetween={20}
         freeMode={true}
-      
+
         breakpoints={{
           300: {
             slidesPerView: 1,
@@ -66,9 +66,9 @@ const CardSwiper: React.FC<CardSwiperProps> = ({ data }) => {
         className="mySwiper"
       >
         {
-          data?.map((item:TProduct,index:number)=>{
-            return(
-              <SwiperSlide key={index}><CardProduct item={item} /></SwiperSlide>
+          data?.map((item: TProduct, index: number) => {
+            return (
+              <SwiperSlide key={index} ><CardProduct item={item} /></SwiperSlide>
 
             )
           })

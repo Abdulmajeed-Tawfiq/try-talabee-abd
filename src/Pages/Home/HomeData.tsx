@@ -17,38 +17,38 @@ import { IoIosFlash } from "react-icons/io"
     count:1,
   } 
 
- export const Store =   {
-    id : 1,
-    name:"Store Name",
-    img : "../store/store.png",
-    off : 15,
-    rate:4.5,
-    description:" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ut maiores vel illo iste architecto ex quis expedita, ducimus dolorum magni asperiores laboriosam inventore, qui molestias fuga recusandae! Neque, enim. ",
-    type:"Neck Sweater",
-    count:1,
-  } 
-  export const AllProductdata :TProduct[] = [  Product,Product,Product,Product,Product,Product,Product,Product,Product,Product ,Product,Product,Product,Product,Product  ] 
- export const data :TProduct[] = [  Product,Product,Product,Product,Product ] 
- export const StoreData :TStore[] = [  Store,Store,Store,Store,Store] 
-  export const Cartdata :TProduct[] = [  Product,Product,Product ] 
+//  export const Store =   {
+//     id : 1,
+//     name:"Store Name",
+//     img : "../store/store.png",
+//     off : 15,
+//     rate:4.5,
+//     description:" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ut maiores vel illo iste architecto ex quis expedita, ducimus dolorum magni asperiores laboriosam inventore, qui molestias fuga recusandae! Neque, enim. ",
+//     type:"Neck Sweater",
+//     count:1,
+//   } 
+  // export const AllProductdata :TProduct[] = [  Product,Product,Product,Product,Product,Product,Product,Product,Product,Product ,Product,Product,Product,Product,Product  ] 
+//  export const data :TProduct[] = [  Product,Product,Product,Product,Product ] 
+//  export const StoreData :TStore[] = [  Store,Store,Store,Store,Store] 
+  // export const Cartdata :TProduct[] = [  Product,Product,Product ] 
 
-    export  const ProductSectionData: TCardProduct ={
-        data :data,
-        title:"title" ,
-        href:"/products" ,
-       count:10,
-       icon:<IoIosFlash />
-      }
+    // export  const ProductSectionData: TCardProduct ={
+    //     data :data,
+    //     title:"title" ,
+    //     href:"/products" ,
+    //    count:10,
+    //    icon:<IoIosFlash />
+    //   }
 
-    export  const StoreSectionData: TCardStore ={
-        data :StoreData,
-        title:"Stores" ,
-        href:"/stores" ,
-       count:10,
-       icon:<IoIosFlash />
-      }
+    // export  const StoreSectionData: TCardStore ={
+    //     data :StoreData,
+    //     title:"Stores" ,
+    //     href:"/stores" ,
+    //    count:10,
+    //    icon:<IoIosFlash />
+    //   }
 
-   export  const CategoriesData : string[] = ["Toys","Sports","Gaming","Furniture","Fashion","Cameras"]
+  //  export  const CategoriesData : string[] = ["Toys","Sports","Gaming","Furniture","Fashion","Cameras"]
  export const BigAdsData:TBigAdsData[]= [
     {
             header : 'Final Reduction',
@@ -93,33 +93,33 @@ const adData: THeroAd[] = [
 ];
 
 
-const bannerData : TbannerData[] = [
-  {
-    imageUrl: '../HeroSection/banner1.png',
-    title: 'NEW ARRIVALS',
-    subtitle: 'SUMMER SALE',
-    discount: '20% OFF',
-    link: '/Products',
-    btn:"Shop Now"
-  },
-   {
-    imageUrl: '../HeroSection/banner1.png',
-    title: 'NEW ARRIVALS',
-    subtitle: 'SUMMER SALE',
-    discount: '20% OFF',
-    link: '/Products',
-    btn:"Shop Now"
-  },
-   {
-    imageUrl: '../HeroSection/banner1.png',
-    title: 'NEW ARRIVALS',
-    subtitle: 'SUMMER SALE',
-    discount: '20% OFF',
-    link: '/Products',
-    btn:"Shop Now"
-  },
-];
-export const HeroSectionData = {  bannerData,adData};
+// const bannerData : TbannerData[] = [
+//   {
+//     imageUrl: '../HeroSection/banner1.png',
+//     title: 'NEW ARRIVALS',
+//     subtitle: 'SUMMER SALE',
+//     discount: '20% OFF',
+//     link: '/Products',
+//     btn:"Shop Now"
+//   },
+//    {
+//     imageUrl: '../HeroSection/banner1.png',
+//     title: 'NEW ARRIVALS',
+//     subtitle: 'SUMMER SALE',
+//     discount: '20% OFF',
+//     link: '/Products',
+//     btn:"Shop Now"
+//   },
+//    {
+//     imageUrl: '../HeroSection/banner1.png',
+//     title: 'NEW ARRIVALS',
+//     subtitle: 'SUMMER SALE',
+//     discount: '20% OFF',
+//     link: '/Products',
+//     btn:"Shop Now"
+//   },
+// ];
+// export const HeroSectionData = {  bannerData,adData};
 
 
 export const specialPropertiesData: TSpecialProperty[] = [

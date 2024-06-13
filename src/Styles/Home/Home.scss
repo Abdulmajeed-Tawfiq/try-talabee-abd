@@ -6,22 +6,23 @@
     background: var(--bg2);
 }
 .HeroSection{
-    display: flex; 
+    display: flex;
+    justify-content: center;
     padding: 0 4vw;
     width: 100% ;
-    height: 34vw;
+    height: 40vw;
     gap: 6%;
     color: var(--black);
     padding-top: 20px;
     margin-bottom: 25px;
     .HeroSection_Carousel{
-        width: 70%;
+        width: 90%;
         height: 100%;
             img{
             //     margin-top: 5px;
             // margin-inline: 20px;
                 width: 100%;
-                height: 32vw;
+                height: 36vw;
                 object-fit: contain;
 
             }
@@ -277,7 +278,7 @@
         a {
             position: relative;
             z-index: 2;
-            color: var(--blacktowhite);
+            color: var(--primary);
         }
         &::before {
             content: '';
@@ -294,7 +295,7 @@
             right: 0;
             }
             a {
-                color: var(--blacktowhite);
+                color: var(--white);
             }
         }
         
@@ -361,19 +362,20 @@
 }
 .HeroSection{
     display: flex; 
+    justify-content: center;
     padding: 0vw 4vw;
     width: 100% ;
-    height: 34vw;
+    height: 40vw;
     gap: 6%;
     color: var(--black);
     .HeroSection_Carousel{
-        width: 70%;
+        width: 90%;
         height: 100%;
             img{
                 margin-top: 5px;
                 margin-inline: 20px;
                 width: 100%;
-                height: 33vw;
+                height: 36vw;
 
                 object-fit: contain;
                 // transform: rotate(180deg) scaleY(-1);

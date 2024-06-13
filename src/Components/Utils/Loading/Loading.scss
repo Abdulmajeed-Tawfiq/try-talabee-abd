@@ -93,13 +93,13 @@
   
 }
 
-
-
-
-
 .loading_page{
   width: 100vw !important;height: 50vh !important;
   display: flex !important;justify-content: space-between !important;align-items: center !important; flex-direction: column;
+}
+.loading_page_no_logo{
+  width: 100vw !important;height: 50vh !important;
+  display: flex !important;justify-content: center !important;align-items: center !important;
 }
 
 

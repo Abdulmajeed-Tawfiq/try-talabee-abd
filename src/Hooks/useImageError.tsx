@@ -1,9 +1,12 @@
 import React from 'react'
-import { UserImageURL } from '../Layout/app/Const';
+import { UserImageURLProduct , UserImageURLStore } from '../Layout/app/Const';
 
-const useImageError = ({currentTarget}:any) => {
+export const useImageErrorProduct = ({currentTarget}:any) => {
     currentTarget.onerror = null;
-    currentTarget.src=`${UserImageURL}`;
+    currentTarget.src=`${UserImageURLProduct}`;
 }
 
-export default useImageError
+export const useImageErrorStore = ({currentTarget}:any) => {
+    currentTarget.onerror = null;
+    currentTarget.src=`${UserImageURLStore}`;
+}

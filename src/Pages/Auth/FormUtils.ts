@@ -8,20 +8,20 @@ export const GenderOption = [
 
 export const getLoginInitialValues = () => {
   return ({
-    phone: '+963111111111',
-    password: '123456789',
+    phone: '',
+    password: '',
   })
 }
 
 export const getRegisterInitialValues = () => {
   return ({
-    first_name: 'abd',
-    last_name: 'tawfik',
-    email: "abd@gmail.com",
-    password: '00000000',
-    phone: "0000",
-    birthday: "2024-10-17",
-    gender: "male"
+    first_name: '',
+    last_name: '',
+    email: "",
+    password: '',
+    phone: "",
+    birthday: "",
+    gender: ""
   })
 }
 

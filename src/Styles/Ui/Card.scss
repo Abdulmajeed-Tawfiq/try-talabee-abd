@@ -1,31 +1,8 @@
-.CardItem{
+.CardItem {
     display: flex !important; 
     .ant-card-body{
         @include Flex;
         padding: 15px;
-
-    }
-    .Card_Counter{
-        width: 30px;
-        @include Flex;
-        flex-direction: column;
-    .Counter{
-        width: 22px;
-    }
-
-    .anticon-plus-circle svg{
-        color:var(--primary);
-       }
-       
-       /* Path */
-       .anticon-plus-circle svg path{
-        color:var(--primary);
-       }
-       
-       /* Ant icon */
-        .ant-btn-circle .ant-btn-icon{
-        color:var(--primary);
-       }
     }
     
     .Card_Img{
@@ -38,6 +15,7 @@
         h5{
             font-size: 14px;
             text-wrap: nowrap;
+            color: var(--black);
         }
         h6{
             font-style: 10px;
@@ -55,6 +33,38 @@
 
     }
 
+}
+
+.Card_Counter{
+    @include Flex;
+    gap: 10px;
+    border-radius: 8px;
+
+    button {
+        text-align: center;
+        // width: 180px;
+    }
+.Counter{
+    width: 22px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.anticon-plus-circle svg, .anticon-minus-circle svg{
+    color:var(--primary);
+    font-size: 22px;
+   }
+   
+   /* Path */
+   .anticon-plus-circle svg path{
+    color:var(--primary);
+   }
+   
+   /* Ant icon */
+    .ant-btn-circle .ant-btn-icon{
+    color:var(--primary);
+   }
 }
 
 

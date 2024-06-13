@@ -14,6 +14,8 @@ import * as yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import Layout from '../../Layout/app/Layout';
 import { fakeLoading } from '../../Backend/FakeData';
+import { useSelector } from 'react-redux';
+import NotAuth from '../../Layout/app/NotAuth';
 
 
 
@@ -25,6 +27,7 @@ const CartPage: React.FC = () => {
   const { mutate, isLoading: LoadingCheckout, isSuccess } = useCheckout()
   const { mutate: createPayment, isLoading: LoadingPayment, isSuccess: SuccessPayemnt, data: UrlPaymnet } = useCreatePayment()
   const navigate = useNavigate()
+  const { isAuthenticated } = useSelector((state: any) => state.auth)
 
   useEffect(() => {
     if (SuccessPayemnt) {
@@ -75,30 +78,34 @@ const CartPage: React.FC = () => {
 
   return (
     <Layout className='CartPage '>
-      <Formik
-        initialValues={{
-          cartItems: data?.data?.at(0)?.cart_items || [],
-          zone: '',
-          building: '',
-          note: '',
-          payment_method: "online",
-          lat: "36.480",
-          long: "36.848"
-        }}
-        // validationSchema={yup.object().shape({
-        //   zone: yup.string().required('Zone is required'),
-        //   building: yup.string().required('Building is required'),
-        //   // note: yup.string().required('note is required'),
-        //   lat: yup.string().required('required'),
-        //   long: yup.string().required('required'),
-        // })}
-        onSubmit={handleSubmit}
-        >
-        <Form>
-          <MemoizedStepsUi />
-          <RenderPageContent />
-        </Form>
-      </Formik>
+      {
+        isAuthenticated ?
+          <Formik
+            initialValues={{
+              cartItems: data?.data?.at(0)?.cart_items || [],
+              zone: '',
+              building: '',
+              note: '',
+              payment_method: "online",
+              lat: "36.480",
+              long: "36.848"
+            }}
+            // validationSchema={yup.object().shape({
+            //   zone: yup.string().required('Zone is required'),
+            //   building: yup.string().required('Building is required'),
+            //   // note: yup.string().required('note is required'),
+            //   lat: yup.string().required('required'),
+            //   long: yup.string().required('required'),
+            // })}
+            onSubmit={handleSubmit}
+          >
+            <Form>
+              <MemoizedStepsUi />
+              <RenderPageContent />
+            </Form>
+          </Formik>
+          : <NotAuth />
+      }
     </Layout>
   );
 };

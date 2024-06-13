@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Virefied from './Pages/Auth/Virefied';
 import SuccessVerify from './Pages/Auth/SuccessVerify';
 import LoadingAntd from './Components/Utils/Loading/LoadingAntd';
+import Stores from './Pages/Store/Stores';
 
 const CheckPaymentPage = lazy(() => import('./Pages/paymentRedirect/Page'));
 const Page404 = lazy(() => import("./Layout/app/NotFoundPage"))
@@ -22,6 +23,7 @@ const Profile = lazy(() => import("./Pages/profile/Profile"))
 const SingleOrderPage = lazy(() => import("./Pages/SingleOrder/SingleOrderPage"))
 const FavouritePage = lazy(() => import("./Pages/Favourite/FavouritePage"))
 const JoinFamily = lazy(() => import("./Pages/JoinFamily/JoinFamily"))
+const Category = lazy(() => import("./Pages/Categories/SingleCategory"))
 
 
 const App = () => {
@@ -49,8 +51,9 @@ const App = () => {
       <Route path="/success_payment" element={<Suspense fallback={<LoadingAntd />}> <SuccessPayment /></Suspense>} />
       <Route path="/favourite" element={<Suspense fallback={<LoadingAntd />}> <FavouritePage /></Suspense>} />
       <Route path="/" element={<Suspense fallback={<LoadingAntd />}> <Home /></Suspense>} />
-
       <Route path="/joinFamily" element={<Suspense fallback={<LoadingAntd />}> <JoinFamily /></Suspense>} />
+      <Route path="/Category/:id" element={<Suspense fallback={<LoadingAntd />}> <Category /></Suspense>} />
+      <Route path="/Category/:id/stores" element={<Suspense fallback={<LoadingAntd />}> <Stores /></Suspense>} />
 
     </Routes>
 

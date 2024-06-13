@@ -15,7 +15,7 @@ interface DropDownProps {
 
 const DropDown: React.FC<DropDownProps> = ({ menuItems, title }) => {
   const renderMenuItems = () => {
-    return menuItems.map((item) => (
+    return menuItems?.map((item) => (
       <Menu.Item key={item.key}>
         <a target="_blank" rel="noopener noreferrer" href={item.href}>
           {item.name}

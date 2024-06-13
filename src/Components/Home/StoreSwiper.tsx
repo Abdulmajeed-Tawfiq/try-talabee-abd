@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-import { A11y, Autoplay, FreeMode, Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from 'swiper/modules';
 import { TStore } from '../../Layout/app/Types';
 import CardStore from './CardStore';
 
@@ -13,7 +13,7 @@ interface CardSwiperProps {
 }
 
 const StoreSwiper: React.FC<CardSwiperProps> = ({ data }) => {
-  // console.log(data);
+  
 
 
   const language = localStorage.getItem('languae')

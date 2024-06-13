@@ -8,7 +8,7 @@ import Categories from './Categories';
 import { MdOutlineArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 
 interface CategoriesSwiperProps {
-  data: string[];
+  data: object[];
 }
 
 const CategoriesSwiper: React.FC<CategoriesSwiperProps> = ({ data }) => {
@@ -49,7 +49,7 @@ const CategoriesSwiper: React.FC<CategoriesSwiperProps> = ({ data }) => {
         className="mySwiper"
         onSwiper={(swiper:any) => (swiperRef.current = swiper)} // Store swiper instance
       >
-        {data?.map((item, index) => (
+        {data?.map((item: any, index) => (
           <SwiperSlide key={index}>
             <Categories item={item} index={index} />
           </SwiperSlide>

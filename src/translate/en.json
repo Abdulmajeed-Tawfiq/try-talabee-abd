@@ -249,11 +249,12 @@
 "accepted":"Accepted",
 "delivering":"Delivering",
 "delivered":"Delivered",
-"My WishList":"My WishList",
+"Favorites":"Favorites",
 "Social Media":"Social Media",
 "Contact":"Contact info",
 "Company name":"Company name",
 "logged in successfully":"Logged in successfully",
+"logged out successfully":"Logged out successfully",
 "partner":"Partners",
 "ClearIMages":"Clear Images",
 "Prouduct Name":"Prouduct Name",
@@ -284,7 +285,7 @@
 "Market Place":"Market Place",
 "Valid Commercial Registration":"Valid Commercial Registration",
 "Selection Type":"Selection Type",
-"stores": "stores",
+"stores": "Stores",
 "Birthday":"Birthday",
 "is requierd":"is requierd",
 "user":"User",
@@ -292,7 +293,15 @@
 "first_name": "First Name",
 "last_name": "Last Name",
 "Successfully Registered": "Successfully Registered",
-"update": "Update"
-
+"update": "Update",
+"edit profile": "edit profile",
+"joinFamily": "joinFamily",
+"FeaturedStores": "FeaturedStores",
+"open": "open",
+"close": "close",
+"save": "save",
+"Change Image": "Change Image",
+"Change password": "Change password",
+"Are you sure you want to logout?": "Are you sure you want to logout?"
 
 }

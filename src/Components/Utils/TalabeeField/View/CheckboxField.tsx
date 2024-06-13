@@ -6,7 +6,6 @@ const CheckboxField = ({ name, label, placeholder, isDisabled, option, isMulti, 
 
   const { t, formik } = useFormField(name, props)
   const CheckboxhandleChange = (value: any) => {
-    // console.log(value.target.checked);
 
     formik.setFieldValue(name, value.target.checked)
 

@@ -249,7 +249,7 @@
 "accepted":"مقبول",
 "delivering":"قيد التوصيل",
 "delivered":"تم التوصيل",
-"My WishList":"المفضلة",
+"Favorites":"المفضلة",
 "Social Media":"تواصل اجتماعي",
 "Contact":"مغلومات التواصل",
 "Company name":"اسم الشركة",
@@ -293,7 +293,24 @@
 "role":"دور",
 "first_name": "الاسم الأول",
 "last_name": "الاسم الأخير",
-"Successfully Registered": "تم التسجيل بنجاح"
+"Successfully Registered": "تم التسجيل بنجاح",
+"logged in successfully":"تم تسجيل الدخول بنجاح",
+"logged out successfully":"تم تسجيل الخروج بنجاح",
+"edit profile": "تعديل الملف الشخصي",
+"joinFamily": "انضم للعائلة",
+"FeaturedStores": "المتاجر المميزة",
+"open": "مفتوح",
+"close": "مغلق",
+"save": "حفظ",
+"Change Image": "تغيير الصورة",
+"Change password": "تغيير كلمة المرور",
+"Are you sure you want to logout?" :"هل انت متأكد من تسجيل الخروج؟"
+
+
+
+
+
+
 
 
 

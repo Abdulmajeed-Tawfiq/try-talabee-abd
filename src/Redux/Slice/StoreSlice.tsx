@@ -8,14 +8,15 @@ interface StroeState {
 }
 
 const initialState: StroeState = {
-    value: {
-        data: [],
-        title: '',
-        href: '',
-        count: 0,
-        icon: null,
-        
-    },
+    value: [
+        {
+            id: 0,
+            reviews_avg_rating: 0,
+            name: "",
+            image: "",
+            description: ""
+        }
+    ],
 }
 
 export const StoreSlice = createSlice({

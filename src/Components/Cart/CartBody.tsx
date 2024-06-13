@@ -11,9 +11,9 @@ const CartBody = ({ data, cart, setViewPage }: any) => {
 
   return (
     <div className="CartBody">
-      {cartItems === undefined ? (
-      <CartEmpty/>) 
-      : (
+      {cartItems?.length === 0 ? (
+        <CartEmpty />)
+        : (
           <>
             <div className='left' >
               {cartItems?.map((item: any, index: number) => (
@@ -24,7 +24,7 @@ const CartBody = ({ data, cart, setViewPage }: any) => {
                 </>
               ))}
             </div>
-       
+
             <div className="CartBody_Right">
               <CheckoutForm sub_total={1050} setViewPage={setViewPage} delivery_fees={100} />
             </div>

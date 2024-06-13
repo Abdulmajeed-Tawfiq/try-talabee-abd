@@ -274,6 +274,25 @@
     display: none;
 }
 
+.not_authenticated {
+    @include Flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 10px;
+
+    button {
+        border: none;
+        padding: 10px 15px;
+        background-color: var(--primary);
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            background-color: var(--nine);
+            scale: 1.05;
+        }
+    }
+  }
+
 
 @media screen and (max-width: 800px) {
 

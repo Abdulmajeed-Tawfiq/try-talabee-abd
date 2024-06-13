@@ -36,3 +36,12 @@ export const getValidationSchema = () => {
     password: Yup.string().min(8, 'Password must be at least 8 characters').required('Please enter your password'),
   });
 }
+
+
+export const getValidationSchemaPassowrd = () => {
+  return Yup.object().shape({
+    current_password: Yup.string().min(8, 'Password must be at least 8 characters').required('Please enter your password'),
+    new_password: Yup.string().min(8, 'Password must be at least 8 characters').required('Please enter your New password'),
+    new_password_confirmation: Yup.string().min(8, 'Password must be at least 8 characters').required('Please enter your confirm password'),
+  });
+}

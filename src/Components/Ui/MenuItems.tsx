@@ -8,7 +8,7 @@ const { SubMenu } = Menu;
 
 
 const generateMenuItems = (items: MenuItem[]): React.ReactNode => {
-  return items.map((item) => {
+  return items?.map((item) => {
     if (item.children) {
       return (
         <SubMenu key={item.key} icon={item.icon} title={item.label}>
